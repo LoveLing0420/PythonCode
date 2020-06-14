@@ -10,6 +10,8 @@
 
 def straight_insertion_sort(ls: list) -> list:
     for i in range(1, len(ls)):
+        if ls[i - 1] < ls[i]:
+            continue
         swap = ls[i]
         while i > 0 and ls[i - 1] > swap:
             ls[i] = ls[i - 1]
